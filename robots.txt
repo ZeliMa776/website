@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://zeli-ma.com/sitemap.xml
