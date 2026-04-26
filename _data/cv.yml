@@ -1,14 +1,17 @@
 cv:
   name: Zeli Ma
-  label: M.S. Student in Computer Science
+  label: M.S.E Student in Computer Science
   email: zma56@jh.edu
+  phone: "4434189697"
   location: Baltimore, MD
   image: ""
   summary: >
-    M.S. student in Computer Science at Johns Hopkins University, working in the
-    ARCADE Lab on Medical Robotics and AI-Assisted Intervention. Research interests
-    include deep learning, diffusion models, vision-language models, and multi-agent
-    systems for surgical perception and clinical workflows.
+    I am broadly interested in Machine Learning and Artificial Intelligence, especially their
+    integration with software systems and intelligent automation. My focus lies in exploring
+    how data-driven models and efficient system design can enhance learning performance,
+    scalability, and decision-making in real world applications. I am also keen to apply AI
+    techniques to domains such as computer vision, interactive environments, where intelligence
+    meets system-level engineering.
 
   social_networks:
     - network: GitHub
@@ -19,12 +22,11 @@ cv:
       - institution: Johns Hopkins University
         location: Baltimore, MD
         area: Computer Science
-        studyType: M.S.
+        studyType: M.S.E
         start_date: 2025-09
         end_date: 2027-05
         highlights:
-          - "ARCADE Lab — advised by Prof. Mathias Unberath & Ph.D. Blanca Inigo Romillo"
-          - "Research: Medical Robotics, Diffusion Models, Vision-Language Models"
+          - "Department of Computer Science, Whiting School of Engineering"
 
       - institution: Shanghai Institute of Technology
         location: Shanghai, China
@@ -33,68 +35,91 @@ cv:
         start_date: 2020-09
         end_date: 2025-03
         highlights:
-          - "GPA: 4.0/5.0 — average 90/100 — ranked 1st / 408"
-          - "National Scholarship (2023), Outstanding Student (2024), First-class Scholarship (2023 & 2024)"
+          - "CGPA: 4.0/5.0 (Average Score: 90%; Rank: 1/408)"
+
+    Honors and Awards:
+      - title: National Scholarship
+        date: "2023"
+        awarder: Shanghai Institute of Technology
+
+      - title: Outstanding Student
+        date: "2024"
+        awarder: Shanghai Institute of Technology
+
+      - title: University-Level First-class Scholarship
+        date: "2023 & 2024"
+        awarder: Shanghai Institute of Technology
+
+    Research:
+      - company: Johns Hopkins University, ARCADE Lab
+        position: Graduate Research Assistant
+        location: Baltimore, MD, USA
+        start_date: 2026-01
+        highlights:
+          - "Advisor: Prof. Mathias Unberath, Ph.D. Blanca Inigo Romillo"
+          - Developed a Monte Carlo-based path planning pipeline for pedicle screw placement across the full thoracolumbar spine (T1–L5), processing 742 patient CT-derived mesh models and generating 23,000+ validated trajectories with 99% success rate.
+          - Engineered region-adaptive constraints for 4 anatomical zones to address varying pedicle morphology, and implemented a surface normal-based endplate filter that eliminated 100% of superior/inferior surface violations.
+          - Built automated batch processing infrastructure with mesh quality control, EDT-based clearance computation, and FCSV output for 3D Slicer visualization and validation.
+
+      - company: Action-Conditioned Intraoperative X-ray View Prediction
+        position: Conditional diffusion model for surgical view planning under C-arm guidance
+        location: Baltimore, MD, USA
+        start_date: 2026-03
+        highlights:
+          - "Built an observation prediction module for closed-loop surgical view planning: given a current fluoroscopy image and a candidate 6-DoF C-arm motion, a conditional diffusion model (DDPM training / DDIM inference) predicts the X-ray at the resulting viewpoint as a visual preview for a downstream VLM (MedGemma)."
+          - Constructed a DRR training dataset from 827 CT volumes using DeepDRR, sampling 100 poses per case (5 vertebra centers × 20 angles spanning AP/lateral/oblique) and filtering ~1,500 training pairs per case by angular and translation distance thresholds.
+          - Designed a U-Net backbone with cross-attention for source image conditioning and AdaGroupNorm for injecting a 9-D relative pose embedding (6D rotation + 3D translation).
+          - Trained with DDPM training / DDIM inference using mixed-precision (fp16) on an RTX 3090.
 
     Experience:
       - company: Qingdao Haier Technology Co., Ltd
-        position: Software Development Intern
+        position: Intern at Software Development Department
         location: Qingdao, China
         start_date: 2024-03
         end_date: 2024-08
         highlights:
-          - Utilized Redis to optimize system performance under high concurrency, reducing database visits by ~40%.
+          - Utilized Redis to optimize the system performance bottlenecks under high concurrency; reduced the database visits by approximately 40% and minimized the overall response time.
           - Designed and developed a batch-processing mechanism to minimize memory consumption.
-          - Optimized database queries by eliminating nested queries and full table scans; added indexes for high-concurrency scenarios.
-          - Implemented a delayed double-deletion strategy for cache consistency.
+          - Optimized database query statements, avoided complex nested queries and full table scanning, and added indexes to improve database query performance in high-concurrency scenarios.
+          - Implemented a delayed double-deletion strategy, as opposed to the asynchronous listening and reliable message-deletion strategy.
 
       - company: Qingdao Haier Technology Co., Ltd
-        position: Software Development Intern
+        position: Intern at Software Development Department
         location: Qingdao, China
         start_date: 2023-07
         end_date: 2023-10
         highlights:
-          - Ensured high availability of the user experience cloud platform using SpringBoot and PostgreSQL.
-          - Used Profiler to identify bottlenecks; implemented algorithm optimization and reduced database access frequency.
-          - Leveraged Alibaba Cloud Prometheus to evaluate memory utilization and resolve leaks and excessive object creation.
-          - Applied Object Pool Technology and Bitmap compression to reduce memory utilization.
+          - Ensured high availability of the user experience cloud platform and resolved performance crashes; designed the app using the SpringBoot and utilized PostgreSQL for data storage and table creation.
+          - Used Profiler to specify code and performance bottlenecks; implemented strategies such as algorithm optimization and reduction of database access frequency.
+          - Leveraged Alibaba Cloud's Prometheus service to evaluate memory utilization patterns, specifying the primary causes such as excessive object creation, memory leaks, and large object presence.
+          - Adopted the Object Pool Technology to create common objects beforehand, batch-processed big data to reduce memory utilization, and used Bitmap to compress user information data structures.
 
       - company: iFLYTEK Co., Ltd.
-        position: Software Development Intern
+        position: Intern at Software Development Department
         location: Hefei, China
         start_date: 2022-12
         end_date: 2023-01
         highlights:
-          - Developed a domain-specific ASR pipeline for hydrology and water conservancy engineering.
-          - Built a speech synthesis corpus using Tacotron2_CSMSC and aligned text–audio pairs for training/validation/test sets.
-          - Collected and processed fieldwork data; extracted key terms from technical specifications via custom text-segmentation scripts.
-          - Trained and evaluated DeepSpeech2, Transformer, Conformer, and iFLYTEK open-platform ASR models.
-          - Achieved a 30% improvement in recognition accuracy, reaching >99% success rate on domain-specific data.
-
-    Research:
-      - company: ARCADE Lab, Johns Hopkins University
-        position: Graduate Research Assistant
-        location: Baltimore, MD
-        start_date: 2025-09
-        highlights:
-          - Automated pedicle screw trajectory planning pipeline covering T1–L5 across 742 patient CT cases (91.7% success rate).
-
-      - company: ARCADE Lab, Johns Hopkins University
-        position: Graduate Research Assistant
-        location: Baltimore, MD
-        start_date: 2025-09
-        highlights:
-          - Action-conditioned intraoperative X-ray view prediction using conditional diffusion model (DDPM/DDIM) with C-arm guidance.
+          - Developed a domain-specific speech recognition pipeline for hydrology and water conservancy engineering.
+          - Collected and processed fieldwork data, extracting key clauses and terms from technical specifications through custom text-segmentation scripts.
+          - Built a speech synthesis corpus using Tacotron2_CSMSC, generating multi-timbre audio and aligning text–audio pairs into training, validation, and test datasets.
+          - Trained and evaluated multiple ASR architectures—DeepSpeech2, Transformer, Conformer, and iFlytek's open-platform model—on the domain corpus.
+          - Selected 10–25 top-performing checkpoints based on validation loss and combined them into an optimal averaged model.
+          - Achieved a 30% improvement in recognition accuracy, reaching a >99% success rate on domain-specific evaluation data.
 
     Skills:
       - name: Programming Languages
         icon: fa-solid fa-code
-        keywords: "Python, C/C++, Java, TypeScript, C#"
+        keywords: "C/C++, Python, Java, C#"
 
-      - name: Frameworks & Tools
+      - name: Development Software
         icon: fa-solid fa-wrench
-        keywords: "PyTorch, ROS2, Docker, Vue3, SpringBoot, Redis, MongoDB"
+        keywords: "Unity, SpringBoot, Redis, Vue"
 
-      - name: Languages
+      - name: Operating Systems
+        icon: fa-solid fa-computer
+        keywords: "CentOS, Debian, Ubuntu, Microsoft Windows, Mac OS"
+
+      - name: Standardized Tests
         icon: fa-solid fa-language
-        keywords: "Mandarin (Native), English (TOEFL 109)"
+        keywords: "TOEFL 109 (R30/L30/S22/W27), GRE 320 (V152/Q168 + 3.5)"
