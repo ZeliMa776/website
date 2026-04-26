@@ -78,6 +78,12 @@ cv:
         start_date: 2025-09
         highlights:
           - Automated pedicle screw trajectory planning pipeline covering T1–L5 across 742 patient CT cases (91.7% success rate).
+
+      - company: ARCADE Lab, Johns Hopkins University
+        position: Graduate Research Assistant
+        location: Baltimore, MD
+        start_date: 2025-09
+        highlights:
           - Action-conditioned intraoperative X-ray view prediction using conditional diffusion model (DDPM/DDIM) with C-arm guidance.
 
     Skills:
