@@ -8,6 +8,8 @@ category: course
 tags: [TypeScript, React, Express, MongoDB, Gemini, Cloudflare R2]
 ---
 
+**Live site:** [wearwise-cs423.web.app](https://wearwise-cs423.web.app/)
+
 WearWise is a personal cloud clothing library where users upload wardrobe 
 photos and receive AI-powered outfit recommendations based on weather, 
 occasion, and personal style, with virtual try-on image generation.
