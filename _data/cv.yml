@@ -67,6 +67,7 @@ cv:
         highlights:
           - Developed a domain-specific ASR pipeline for hydrology and water conservancy engineering.
           - Built a speech synthesis corpus using Tacotron2_CSMSC and aligned text–audio pairs for training/validation/test sets.
+          - Collected and processed fieldwork data; extracted key terms from technical specifications via custom text-segmentation scripts.
           - Trained and evaluated DeepSpeech2, Transformer, Conformer, and iFLYTEK open-platform ASR models.
           - Achieved a 30% improvement in recognition accuracy, reaching >99% success rate on domain-specific data.
 
