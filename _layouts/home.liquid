@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.liquid %}
+    <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url | bust_file_cache }}">
+  </head>
+  <body class="zm-home-body">
+    {% include homepage.liquid %}
+    <script defer src="{{ '/assets/js/home.js' | relative_url | bust_file_cache }}"></script>
+  </body>
+</html>
