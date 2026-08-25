@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://zeli-ma.com/sitemap.xml
+Sitemap: https://zelima776.github.io/website/sitemap.xml
