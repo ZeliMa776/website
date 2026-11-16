@@ -60,6 +60,13 @@ body.zm-home-body {
   text-decoration: none;
 }
 
+/* al-folio's main.css sets color: var(--global-text-color) directly on p, div, span, strong, etc.,
+   which breaks inheritance (black text on navy panels, and in dark mode). This selector is (0,0,2):
+   it beats those element rules but loses to every class-based rule below. */
+html :where(.zm-site) :is(p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong) {
+  color: inherit;
+}
+
 .zm-site a,
 .zm-site button {
   transition:
@@ -438,7 +445,7 @@ body.zm-home-body {
   box-shadow: 0 9px 24px rgba(20, 45, 55, 0.07);
 }
 
-.zm-map-node span {
+.zm-map-node > span {
   margin-bottom: 6px;
   color: var(--zm-sage-deep);
   font-size: 0.58rem;
