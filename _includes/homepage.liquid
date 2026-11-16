@@ -1,10 +1,10 @@
 <div id="zeli-home" class="zm-site" aria-label="Zeli Ma personal website">
   <div class="zm-shell">
     <header class="zm-nav">
-      <a class="zm-brand" href="#zeli-home" aria-label="Zeli Ma home" data-aria-en="Zeli Ma home" data-aria-zh="Zeli Ma 首页">
+      <a class="zm-brand" href="#zeli-home" aria-label="Zeli Ma home" data-aria-en="Zeli Ma home" data-aria-zh="马泽理首页">
         <span class="zm-brand-mark" aria-hidden="true">ZM</span>
         <span class="zm-brand-copy">
-          <strong>Zeli Ma</strong>
+          <strong data-en="Zeli Ma" data-zh="马泽理">Zeli Ma</strong>
           <span
             data-en="Embodied Agents · Medical Robotics"
             data-zh="具身智能体 · 医疗机器人"
@@ -29,7 +29,9 @@
     <main>
       <section class="zm-hero" aria-labelledby="hero-title">
         <div class="zm-hero-copy">
-          <p class="zm-eyebrow">ZELI MA · JOHNS HOPKINS UNIVERSITY</p>
+          <p class="zm-eyebrow" data-en="ZELI MA · JOHNS HOPKINS UNIVERSITY" data-zh="马泽理 · 约翰斯·霍普金斯大学">
+            ZELI MA · JOHNS HOPKINS UNIVERSITY
+          </p>
           <h1 id="hero-title">
             <span data-en="Embodied Agents &" data-zh="具身智能体与">Embodied Agents &</span>
             <em data-en="Image-Guided Robotics." data-zh="影像引导机器人。">Image-Guided Robotics.</em>
@@ -72,7 +74,7 @@
         >
           <div class="zm-orbit zm-orbit-one" aria-hidden="true"></div>
           <div class="zm-orbit zm-orbit-two" aria-hidden="true"></div>
-          <div class="zm-map-center" aria-hidden="true"><strong>ZM</strong><span>RESEARCH</span></div>
+          <div class="zm-map-center" aria-hidden="true"><strong>ZM</strong><span data-en="RESEARCH" data-zh="研究">RESEARCH</span></div>
           <div class="zm-map-node zm-map-node-medical" aria-hidden="true">
             <span>01</span
             ><strong
@@ -135,9 +137,9 @@
             <div class="zm-geometry-visual" aria-hidden="true">
               <span class="zm-visual-index">ARCADE LAB · 01</span>
               <div class="zm-imaging-cone"></div>
-              <div class="zm-imaging-source">SOURCE</div>
-              <div class="zm-imaging-detector">DETECTOR</div>
-              <div class="zm-imaging-target">TARGET</div>
+              <div class="zm-imaging-source" data-en="SOURCE" data-zh="射线源">SOURCE</div>
+              <div class="zm-imaging-detector" data-en="DETECTOR" data-zh="探测器">DETECTOR</div>
+              <div class="zm-imaging-target" data-en="TARGET" data-zh="目标">TARGET</div>
               <div class="zm-patient-form"></div>
               <div class="zm-robot-path"></div>
               <div class="zm-robot-arm"><i></i><i></i><i></i></div>
@@ -213,9 +215,16 @@
             <article class="zm-feature-card">
               <div class="zm-ai-visual" aria-hidden="true">
                 <span class="zm-visual-index">ICL · 01</span>
-                <div class="zm-ai-row"><span>AI USE</span><i style="--bar-width: 68%"></i><i style="--bar-width: 36%"></i></div>
-                <div class="zm-ai-row"><span>PERCEIVED USE</span><i style="--bar-width: 46%"></i><i style="--bar-width: 74%"></i></div>
-                <div class="zm-ai-row"><span>FEEDBACK</span><i style="--bar-width: 58%"></i><i style="--bar-width: 42%"></i></div>
+                <div class="zm-ai-row">
+                  <span data-en="AI USE" data-zh="AI 使用">AI USE</span><i style="--bar-width: 68%"></i><i style="--bar-width: 36%"></i>
+                </div>
+                <div class="zm-ai-row">
+                  <span data-en="PERCEIVED USE" data-zh="感知使用">PERCEIVED USE</span><i style="--bar-width: 46%"></i
+                  ><i style="--bar-width: 74%"></i>
+                </div>
+                <div class="zm-ai-row">
+                  <span data-en="FEEDBACK" data-zh="反馈">FEEDBACK</span><i style="--bar-width: 58%"></i><i style="--bar-width: 42%"></i>
+                </div>
                 <span class="zm-visual-caption" data-en="MEASUREMENT · FEEDBACK · FIELD STUDY" data-zh="测量 · 反馈 · 实地研究"
                   >MEASUREMENT · FEEDBACK · FIELD STUDY</span
                 >
@@ -439,7 +448,7 @@
             than 40 pull requests spanning features, testing, code review, and CI/CD.
           </p>
           <div class="zm-independent-proof">
-            <span>40+ PRs</span><span data-en="4 iterations" data-zh="4 轮迭代">4 iterations</span
+            <span data-en="40+ PRs" data-zh="40+ 个 PR">40+ PRs</span><span data-en="4 iterations" data-zh="4 轮迭代">4 iterations</span
             ><span data-en="Live prototype" data-zh="在线原型">Live prototype</span>
           </div>
           <a href="https://wearwise-cs423.web.app/" target="_blank" rel="noopener" data-en="Visit live prototype ↗" data-zh="访问在线原型 ↗"
@@ -537,10 +546,17 @@
         <div class="zm-contact-links">
           <a href="mailto:zma56@jh.edu">zma56@jh.edu ↗</a>
           <a href="https://github.com/ZeliMa776" target="_blank" rel="noopener">GitHub / ZeliMa776 ↗</a>
-          <a href="{{ '/assets/pdf/Zeli_Ma_CV.pdf' | relative_url }}" target="_blank" rel="noopener">CV / PDF ↗</a>
+          <a href="{{ '/assets/pdf/Zeli_Ma_CV.pdf' | relative_url }}" target="_blank" rel="noopener" data-en="CV / PDF ↗" data-zh="简历 / PDF ↗"
+            >CV / PDF ↗</a
+          >
         </div>
       </div>
-      <footer><span>© 2026 Zeli Ma</span><span>Computer Science · Johns Hopkins University</span></footer>
+      <footer>
+        <span data-en="© 2026 Zeli Ma" data-zh="© 2026 马泽理">© 2026 Zeli Ma</span
+        ><span data-en="Computer Science · Johns Hopkins University" data-zh="计算机科学 · 约翰斯·霍普金斯大学"
+          >Computer Science · Johns Hopkins University</span
+        >
+      </footer>
     </div>
   </section>
 </div>
