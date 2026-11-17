@@ -1,0 +1,154 @@
+% Source of assets/pdf/Zeli_Ma_CV.pdf (the CV linked from the homepage, footer and nav).
+% Build with XeLaTeX, then copy the PDF over assets/pdf/Zeli_Ma_CV.pdf:
+%   xelatex -interaction=nonstopmode -output-directory=<tmp> _cv/Zeli_Ma_CV.tex
+% Jekyll ignores the _cv/ folder, so this file is not published on the site.
+% Keep it to exactly two pages: page 2 starts at "Research Experience (continued)".
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,hmargin=0.8in,top=0.8in,bottom=0.6in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{texgyreheros}[
+  Extension = .otf,
+  UprightFont = *-regular,
+  BoldFont = *-bold,
+  ItalicFont = *-italic,
+  BoldItalicFont = *-bolditalic
+]
+
+\definecolor{cvgray}{HTML}{595959}
+\linespread{1.08}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\frenchspacing
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=9999
+\emergencystretch=0pt
+
+\hypersetup{
+  pdftitle={Zeli Ma - CV},
+  pdfauthor={Zeli Ma}
+}
+
+% Section heading: bold caps, 0.4pt rule underneath.
+\newcommand{\cvsection}[1]{%
+  \par\vspace{12pt}%
+  \hbox{\bfseries\addfontfeatures{LetterSpace=8}\MakeUppercase{#1}\strut}%
+  \nointerlineskip\kern 2.67pt\hrule height 0.4pt\kern 6pt\prevdepth=0pt}
+
+% Entry line: bold title on the left, gray date on the right.
+\newcommand{\cvheading}[2]{\textbf{#1}\hfill{\color{cvgray}#2}\par}
+\newcommand{\cvsubline}[1]{\textit{#1}\par}
+\newcommand{\cvnote}[1]{{\small\color{cvgray}#1}\par}
+
+% Project inside a lab block.
+\newcommand{\cvproject}[2]{\par\vspace{6pt}\cvheading{#1}{#2}}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[label=\textbullet, leftmargin=12bp, labelsep=5bp,
+    topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=1pt, after=\vspace{-2pt}]}%
+  {\unskip\end{itemize}}% \unskip: a trailing space must not become an empty last line
+
+\begin{document}
+
+{\centering
+  {\LARGE\bfseries Zeli Ma\par}
+  \vspace{5.07pt}
+  {\small Department of Computer Science, Whiting School of Engineering, Johns Hopkins University\par}
+  \vspace{3.08pt}
+  {\small\color{cvgray}zma56@jh.edu \enspace·\enspace +1 443 418 9697
+    \enspace·\enspace \href{https://zelima776.github.io/website/}{zelima776.github.io/website}
+    \enspace·\enspace \href{https://github.com/zelima776}{github.com/zelima776}\par}
+}
+
+\cvsection{Education}
+\cvheading{Johns Hopkins University}{Sep 2025 – Dec 2026 (expected)}
+\cvsubline{M.S.E. in Computer Science, Whiting School of Engineering}
+\vspace{3pt}
+\cvheading{Shanghai Institute of Technology}{Sep 2020 – Mar 2025}
+\cvsubline{B.Eng. in Software Engineering}
+\textbf{Ranked 1st of 408} in the major. GPA 4.0/5.0, average 90/100.\par
+
+\cvsection{Research Interests}
+Foundation-model agents for embodied decision-making: coordinating multiple robots in shared, partially observed workspaces, and deciding when to act versus when to gather new observations. Primary testbed: image-guided interventions, where errors are costly and scene awareness is limited.\par
+
+\cvsection{Manuscript Under Review}
+\textit{Agentic Multi-Robot Orchestration in Image-guided Interventions under Different Levels of Scene Awareness.}\par
+\textbf{Zeli Ma}$^{\dagger}$, Blanca Íñigo$^{\dagger}$, Aiza Maksutova, Jiaming Du, Michelle Song, and Mathias Unberath.\par
+\cvnote{Under review at IPCAI 2027. \enspace·\enspace $^{\dagger}$Equal contribution.}
+
+\cvsection{Research Experience}
+\cvheading{ARCADE Lab, Johns Hopkins University}{Jan 2026 – Present}
+\cvsubline{Graduate Research Assistant}
+\cvnote{Advisor: Prof. Mathias Unberath \enspace·\enspace Research mentor: Blanca Íñigo}
+\vspace{11pt}
+
+\cvproject{Agentic multi-robot coordination in X-ray-guided spine interventions}{Jul 2026 – Present}
+\begin{cvitems}
+  \item Built an Isaac Sim digital twin of a robotic spine suite in which a Brainlab Loop-X must reach prescribed X-ray imaging views while sharing the workspace with a UR5 needle-guide arm during transpedicular access.
+  \item Developed a language-model agent that could replan robot motion or acquire new stereo RGB observations to update the digital twin, integrating motion planning, stereo reconstruction from RGB cameras on the Loop-X, and inter-robot registration.
+  \item Across 18 simulated interference scenarios, the agent reached all target poses without collision in \textbf{18/18} scenarios with ground-truth geometry and in \textbf{14/18} with the twin reconstructed from stereo RGB observations; a rule-based coordinator succeeded in \textbf{12/18} under both conditions.
+\end{cvitems}
+
+\cvproject{Pedicle screw trajectory planning}{Jan – Mar 2026}
+\begin{cvitems}
+  \item Developed a Monte Carlo planner for thoracolumbar pedicle screw placement (T1–L5), generating \textbf{over 23,000 trajectories} from \textbf{742 CT-derived spine models}.
+  \item Adapted trajectory constraints to four anatomical regions. Used surface normals to exclude endplate crossings and a Euclidean distance transform to compute bone clearance.
+  \item Achieved \textbf{91.7\%} planning success and a \textbf{99.3\%} validation pass rate with no endplate violations, at 2.5–3.3\,mm median cortical clearance. Automated mesh quality checks and exported trajectories for inspection in 3D Slicer.
+\end{cvitems}
+
+\newpage
+\cvsection{Research Experience (continued)}
+\cvheading{Intuitive Computing Laboratory, Johns Hopkins University}{May 2026 – Present}
+\cvsubline{Student Investigator}
+\cvnote{Advisor: Prof. Chien-Ming Huang}
+\vspace{11pt}
+
+\cvproject{Personalized feedback on students’ token use in ChatGPT Work mode}{Oct 2026 – Present}
+\begin{cvitems}
+  \item Built a macOS client and Go backend that use OpenTelemetry to measure token use in ChatGPT Work mode on macOS, keeping minute-level records on the device and uploading only encrypted daily summaries. A dashboard compares each student’s daily use with their own baseline.
+  \item Drafted an IRB protocol for design interviews and a planned 28-day within-participant study in which feedback would begin on a randomly assigned day (8–15).
+\end{cvitems}
+
+\cvsection{Selected Projects}
+\textbf{Café social robot} \enspace{\small\color{cvgray}Human-Robot Interaction course project}\par
+\begin{cvitems}
+  \item Built a conversational service robot with GPT-4o, Whisper, speech synthesis, and ROS 2.
+  \item Refined the robot’s dialogue policy over two co-design rounds with the same two participants. In the second round, the robot made fewer unsolicited drink suggestions and sustained conversations on topics beyond coffee.
+\end{cvitems}
+
+\cvsection{Teaching Experience}
+\cvheading{Johns Hopkins University}{Fall 2026}
+Course Assistant, Computer Vision (EN.601.461/661), Department of Computer Science\par
+
+\cvsection{Industry Experience}
+\cvheading{Qingdao Haier Technology Co., Ltd.}{Jul – Oct 2023; Mar – Aug 2024}
+\cvsubline{Software Development Intern}
+\begin{cvitems}
+  \item Built backend services with Spring Boot, PostgreSQL, and Redis. Added caching that reduced database accesses by about 40\% under high concurrency.
+\end{cvitems}
+\vspace{5pt}
+\cvheading{iFLYTEK Co., Ltd.}{Dec 2022 – Jan 2023}
+\cvsubline{Software Development Intern, Speech Recognition}
+\begin{cvitems}
+  \item Built a domain-specific speech corpus for hydrology and water engineering, and evaluated DeepSpeech2, Transformer, and Conformer recognizers on domain terminology.
+\end{cvitems}
+
+\cvsection{Honors and Awards}
+National Scholarship (top $\sim$0.2\% of undergraduates nationwide)\hfill 2023\par
+Outstanding Student, Shanghai Institute of Technology\hfill 2024\par
+University First-Class Scholarship\hfill 2023 and 2024\par
+
+\cvsection{Technical Skills and Languages}
+\vspace{1pt}
+\makebox[127.2bp][l]{\textbf{Programming}}Python, C/C++, Go\par
+\makebox[127.2bp][l]{\textbf{Robotics and imaging}}Isaac Sim, ROS 2, MoveIt, OMPL, DeepDRR, 3D Slicer\par
+\makebox[127.2bp][l]{\textbf{Systems}}Linux, PostgreSQL, Redis, OpenTelemetry\par
+\makebox[127.2bp][l]{\textbf{English}}TOEFL iBT 109/120\par
+
+\end{document}
