@@ -113,13 +113,6 @@
               From research questions to working systems
             </h2>
           </div>
-          <p
-            class="zm-section-note"
-            data-en="Each project highlights the research question, my contribution, and the evidence or current status."
-            data-zh="每个项目突出研究问题、我的具体工作，以及已有结果或当前进展。"
-          >
-            Each project highlights the research question, my contribution, and the evidence or current status.
-          </p>
         </div>
 
         <div class="zm-lab-group">
@@ -160,33 +153,34 @@
                 <div class="zm-point">
                   <strong data-en="Research question" data-zh="研究问题">Research question</strong>
                   <p
-                    data-en="When two robots share a crowded interventional workspace that is only partially known, how should an agent decide whether to replan a motion or first acquire a new X-ray view?"
-                    data-zh="当两台机器人共享拥挤且只部分可知的介入手术空间时，智能体应如何决定是重新规划运动，还是先获取新的 X 射线视角？"
+                    data-en="When two robots share a crowded interventional workspace that is only partially known, how should an agent decide whether to replan robot motion or first acquire new observations of the scene?"
+                    data-zh="当两台机器人共享拥挤且只部分可知的介入手术空间时，智能体应如何决定是重新规划机器人运动，还是先获取新的场景观测？"
                   >
                     When two robots share a crowded interventional workspace that is only partially known, how should an agent decide whether to
-                    replan a motion or first acquire a new X-ray view?
+                    replan robot motion or first acquire new observations of the scene?
                   </p>
                 </div>
                 <div class="zm-point">
                   <strong data-en="My contribution" data-zh="我的工作">My contribution</strong>
                   <p
-                    data-en="I built an Isaac Sim digital twin in which a Brainlab Loop-X and a UR5 needle-guide arm share the workspace during transpedicular access, and developed a language-model agent that integrates motion planning, stereo reconstruction, and inter-robot registration to reroute a robot or acquire a new view that updates the twin."
-                    data-zh="我在 Isaac Sim 中搭建了经椎弓根入路场景的数字孪生，让 Brainlab Loop-X 与 UR5 导针机械臂共享工作空间；并开发了一个语言模型智能体，整合运动规划、双目重建与机器人间配准，可以让机器人绕行，或采集新视角来更新数字孪生。"
+                    data-en="I built an Isaac Sim digital twin of transpedicular access in which a Brainlab Loop-X must reach prescribed X-ray imaging views while sharing the workspace with a UR5 needle-guide arm. I developed a language-model agent that could replan robot motion or acquire new stereo RGB observations from the Loop-X to update the digital twin, combining motion planning, stereo reconstruction, and inter-robot registration."
+                    data-zh="我在 Isaac Sim 中搭建了经椎弓根入路场景的数字孪生：Brainlab Loop-X 需要到达指定的 X 射线成像视角，同时与 UR5 导针机械臂共享工作空间。我开发了一个语言模型智能体，它可以重新规划机器人运动，或通过 Loop-X 上的双目 RGB 相机获取新的观测来更新数字孪生；系统整合了运动规划、双目重建与机器人间配准。"
                   >
-                    I built an Isaac Sim digital twin in which a Brainlab Loop-X and a UR5 needle-guide arm share the workspace during transpedicular
-                    access, and developed a language-model agent that integrates motion planning, stereo reconstruction, and inter-robot registration
-                    to reroute a robot or acquire a new view that updates the twin.
+                    I built an Isaac Sim digital twin of transpedicular access in which a Brainlab Loop-X must reach prescribed X-ray imaging views
+                    while sharing the workspace with a UR5 needle-guide arm. I developed a language-model agent that could replan robot motion or
+                    acquire new stereo RGB observations from the Loop-X to update the digital twin, combining motion planning, stereo reconstruction,
+                    and inter-robot registration.
                   </p>
                 </div>
                 <div class="zm-point">
                   <strong data-en="Result" data-zh="结果">Result</strong>
                   <p
-                    data-en="In 18 simulated interference scenarios, the agent reached every target pose without collision using ground-truth geometry (18/18) and 14/18 using the reconstructed twin, versus 12/18 for a rule-based coordinator in both settings. Co-first-authored manuscript under review at IPCAI 2027."
-                    data-zh="在 18 个仿真干扰场景中，智能体在真实几何下全部无碰撞到达目标位姿（18/18），在重建的数字孪生下为 14/18；基于规则的协调器在两种条件下均为 12/18。共同第一作者论文已投稿 IPCAI 2027，正在审稿。"
+                    data-en="Across 18 simulated interference scenarios, the agent reached all target poses without collision in 18/18 scenarios with ground-truth geometry and in 14/18 with the twin reconstructed from stereo RGB observations. A rule-based coordinator succeeded in 12/18 under both conditions. Co-first-authored manuscript under review at IPCAI 2027."
+                    data-zh="在 18 个仿真干扰场景中：使用真值几何时，智能体在 18/18 个场景中无碰撞到达全部目标位姿；使用由双目 RGB 观测重建的数字孪生时为 14/18。基于规则的协调器在两种条件下均为 12/18。共同第一作者论文已投稿 IPCAI 2027，正在审稿。"
                   >
-                    In 18 simulated interference scenarios, the agent reached every target pose without collision using ground-truth geometry (18/18)
-                    and 14/18 using the reconstructed twin, versus 12/18 for a rule-based coordinator in both settings. Co-first-authored manuscript
-                    under review at IPCAI 2027.
+                    Across 18 simulated interference scenarios, the agent reached all target poses without collision in 18/18 scenarios with
+                    ground-truth geometry and in 14/18 with the twin reconstructed from stereo RGB observations. A rule-based coordinator succeeded in
+                    12/18 under both conditions. Co-first-authored manuscript under review at IPCAI 2027.
                   </p>
                 </div>
               </div>
@@ -225,8 +219,8 @@
                 <div class="zm-ai-row">
                   <span data-en="FEEDBACK" data-zh="反馈">FEEDBACK</span><i style="--bar-width: 58%"></i><i style="--bar-width: 42%"></i>
                 </div>
-                <span class="zm-visual-caption" data-en="MEASUREMENT · FEEDBACK · FIELD STUDY" data-zh="测量 · 反馈 · 实地研究"
-                  >MEASUREMENT · FEEDBACK · FIELD STUDY</span
+                <span class="zm-visual-caption" data-en="MEASUREMENT · FEEDBACK · STUDY DESIGN" data-zh="测量 · 反馈 · 研究设计"
+                  >MEASUREMENT · FEEDBACK · STUDY DESIGN</span
                 >
               </div>
               <div class="zm-feature-copy">
@@ -250,28 +244,29 @@
                   <div class="zm-point">
                     <strong data-en="My contribution" data-zh="我的工作">My contribution</strong>
                     <p
-                      data-en="I built a macOS client and Go backend that measure ChatGPT token use via OpenTelemetry, keeping minute-level records on the device and uploading only encrypted daily summaries. A dashboard compares each student's daily use with their own baseline."
-                      data-zh="我开发了 macOS 客户端和 Go 后端，通过 OpenTelemetry 测量 ChatGPT 的 token 使用量：分钟级记录只保存在本机，仅上传加密的每日汇总。仪表盘将每位学生的每日使用量与其个人基线进行比较。"
+                      data-en="I built a macOS client and Go backend that measure token use in ChatGPT Work mode on macOS via OpenTelemetry, keeping minute-level records on the device and uploading only encrypted daily summaries. A dashboard compares each student's daily use with their own baseline."
+                      data-zh="我开发了 macOS 客户端和 Go 后端，通过 OpenTelemetry 测量 macOS 上 ChatGPT Work mode 的 token 使用量：分钟级记录只保存在本机，仅上传加密的每日汇总。仪表盘将每位学生的每日使用量与其个人基线进行比较。"
                     >
-                      I built a macOS client and Go backend that measure ChatGPT token use via OpenTelemetry, keeping minute-level records on the
-                      device and uploading only encrypted daily summaries. A dashboard compares each student's daily use with their own baseline.
+                      I built a macOS client and Go backend that measure token use in ChatGPT Work mode on macOS via OpenTelemetry, keeping
+                      minute-level records on the device and uploading only encrypted daily summaries. A dashboard compares each student's daily use
+                      with their own baseline.
                     </p>
                   </div>
                   <div class="zm-point">
                     <strong data-en="Status" data-zh="当前进展">Status</strong>
                     <p
-                      data-en="IRB protocol prepared for design interviews and a planned 28-day within-participant study in which feedback begins on a randomly assigned day."
-                      data-zh="已完成设计访谈与一项为期 28 天被试内研究的 IRB 方案；每位参与者的反馈会在随机分配的某一天开始。"
+                      data-en="The measurement system and dashboard are built; the user study is planned. I drafted an IRB protocol for design interviews and a planned 28-day within-participant study in which each participant's feedback would begin on a randomly assigned day."
+                      data-zh="测量系统与仪表盘已完成开发，用户研究尚在计划中。已为设计访谈和一项计划开展的 28 天被试内研究拟定 IRB 方案，每位参与者的反馈将从随机分配的某一天开始。"
                     >
-                      IRB protocol prepared for design interviews and a planned 28-day within-participant study in which feedback begins on a randomly
-                      assigned day.
+                      The measurement system and dashboard are built; the user study is planned. I drafted an IRB protocol for design interviews and a
+                      planned 28-day within-participant study in which each participant's feedback would begin on a randomly assigned day.
                     </p>
                   </div>
                 </div>
                 <div class="zm-tags">
                   <span data-en="Generative AI" data-zh="生成式 AI">Generative AI</span
                   ><span data-en="Behavioral feedback" data-zh="行为反馈">Behavioral feedback</span
-                  ><span data-en="Field study" data-zh="实地研究">Field study</span>
+                  ><span data-en="Study design" data-zh="研究设计">Study design</span>
                 </div>
               </div>
             </article>
@@ -315,11 +310,11 @@
                   <div class="zm-point">
                     <strong data-en="Result" data-zh="初步结果">Result</strong>
                     <p
-                      data-en="The second iteration improved all eight evaluated behavior dimensions; both early participants (n = 2) described the interaction as natural without changing how they communicated."
-                      data-zh="第二轮在八个行为维度上均有改善；两名早期参与者（n = 2）都认为交流自然，无需刻意改变表达方式。"
+                      data-en="Refined the robot’s dialogue policy over two co-design rounds with the same two participants. In the second round, the robot made fewer unsolicited drink suggestions and sustained conversations on topics beyond coffee."
+                      data-zh="与同样两名参与者进行了两轮共创设计，逐轮改进机器人的对话策略。第二轮中，机器人主动推荐饮品的情况减少，并能围绕咖啡以外的话题持续交谈。"
                     >
-                      The second iteration improved all eight evaluated behavior dimensions; both early participants (n = 2) described the interaction
-                      as natural without changing how they communicated.
+                      Refined the robot’s dialogue policy over two co-design rounds with the same two participants. In the second round, the robot
+                      made fewer unsolicited drink suggestions and sustained conversations on topics beyond coffee.
                     </p>
                   </div>
                 </div>
@@ -341,13 +336,6 @@
             Evidence from completed research systems
           </h2>
         </div>
-        <p
-          class="zm-section-note"
-          data-en="Completed work in medical robotics and generative imaging, presented through verifiable technical outcomes."
-          data-zh="已完成的医疗机器人与生成式医学影像项目，并以可验证的技术指标呈现。"
-        >
-          Completed work in medical robotics and generative imaging, presented through verifiable technical outcomes.
-        </p>
       </div>
 
       <div class="zm-output-grid">
@@ -363,11 +351,11 @@
               Automated Pedicle Screw Trajectory Planning
             </h3>
             <p
-              data-en="I designed and implemented a T1–L5 planning pipeline covering 17 vertebral levels, and evaluated more than 23,000 candidate trajectories across 742 CT cases."
-              data-zh="我设计并实现了覆盖 T1–L5 共 17 个椎体节段的自动规划流程，并在 742 例 CT 数据上评估了超过 23,000 条候选轨迹。"
+              data-en="I designed and implemented an automated planning pipeline for T1–L5 (17 vertebral levels) and generated more than 23,000 candidate trajectories from 742 CT-derived spine models."
+              data-zh="我设计并实现了覆盖 T1–L5 共 17 个椎体节段的自动规划流程，并基于 742 例 CT 重建的脊柱模型生成了超过 23,000 条候选轨迹。"
             >
-              I designed and implemented a T1–L5 planning pipeline covering 17 vertebral levels, and evaluated more than 23,000 candidate trajectories
-              across 742 CT cases.
+              I designed and implemented an automated planning pipeline for T1–L5 (17 vertebral levels) and generated more than 23,000 candidate
+              trajectories from 742 CT-derived spine models.
             </p>
             <div class="zm-evidence">
               <strong data-en="Result" data-zh="结果">Result</strong
@@ -424,13 +412,6 @@
             Selected engineering beyond the lab
           </h2>
         </div>
-        <p
-          class="zm-section-note"
-          data-en="Product engineering experience is included as supporting evidence, after the research portfolio."
-          data-zh="产品工程实践作为补充，保持在研究内容之后。"
-        >
-          Product engineering experience is included as supporting evidence, after the research portfolio.
-        </p>
       </div>
 
       <article class="zm-independent-card">

@@ -1322,6 +1322,17 @@ html[lang^="zh"] .zm-site {
   font-family: "Noto Sans SC", "Microsoft YaHei", var(--zm-sans);
 }
 
+/* Keep "影像引导机器人。" (8 full-width glyphs) on one line: cap the Chinese hero title
+   at 12% of the hero column so 8 glyphs always fit, and only break between the two lines. */
+.zm-hero-copy {
+  container-type: inline-size;
+}
+
+html[lang^="zh"] .zm-hero h1 {
+  font-size: min(5rem, 12cqi);
+  word-break: keep-all;
+}
+
 /* Responsive layout */
 
 @media (max-width: 1020px) {
