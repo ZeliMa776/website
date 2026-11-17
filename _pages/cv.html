@@ -1,0 +1,29 @@
+---
+layout: null
+permalink: /cv/
+title: CV
+nav: true
+nav_order: 5
+# The header links this nav item straight to the PDF. /cv/ itself only forwards old bookmarks.
+redirect: /assets/pdf/Zeli_Ma_CV.pdf
+sitemap: false
+---
+
+{%- assign cv_url = page.redirect | relative_url -%}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV · Zeli Ma</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="{{ cv_url | prepend: site.url }}" />
+    <meta http-equiv="refresh" content="0; url={{ cv_url }}" />
+    <script>
+      location.replace("{{ cv_url }}");
+    </script>
+  </head>
+  <body>
+    <p>The CV has moved to <a href="{{ cv_url }}">{{ cv_url | prepend: site.url }}</a>.</p>
+  </body>
+</html>
