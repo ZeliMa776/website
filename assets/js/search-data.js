@@ -416,7 +416,7 @@ ninja.data = [{
               window.location.href = "/website/projects/coffee_robot/";
             },},{id: "projects-automated-pedicle-screw-trajectory-planning",
           title: 'Automated Pedicle Screw Trajectory Planning',
-          description: "Full thoracolumbar spine planning pipeline across 742 patient CT cases",
+          description: "Automated T1–L5 trajectory planning across 742 CT-derived spine models",
           section: "Projects",handler: () => {
               window.location.href = "/website/projects/pedicle_screw/";
             },},{id: "projects-wearwise-ai-outfit-recommendation",

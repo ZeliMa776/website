@@ -36,12 +36,13 @@ Deploys via GitHub Actions → GitHub Pages. Workflow: `.github/workflows/deploy
 **Pipeline:**
 
 1. Checkout
-2. Ruby 3.3.5 + `bundler-cache`
+2. Ruby 3.3 (latest patch) + `bundler-cache`
 3. Python 3.13 (for nbconvert)
 4. Rewrite `giscus.repo` in `_config.yml` to `github.repository`
 5. `apt install imagemagick`, `pip install --upgrade nbconvert`
 6. `JEKYLL_ENV=production bundle exec jekyll build` → outputs to `_site/`
 7. `purgecss -c purgecss.config.js` (drops unused CSS)
+   - On pull requests the job stops here and uploads `_site/` as the `site-preview` artifact (kept 7 days). Download it with `gh run download <run-id> -n site-preview` and serve it under `/website/` to check the real build locally.
 8. `JamesIves/github-pages-deploy-action@v4` **force-pushes** `_site/` to the `gh-pages` branch (this is why every fetch shows `+ ...gh-pages (forced update)` — normal, not a problem)
 9. GitHub Pages serves `gh-pages` at https://zelima776.github.io/website/ (no custom domain, no `CNAME` file)
 
@@ -75,8 +76,10 @@ npx prettier . --write
 
 - Default branch is `main`. Default remote is `origin`.
 - **`_config.yml`:** `url: https://zelima776.github.io` + `baseurl: /website`. This is a project site, so `baseurl` must stay `/website`. Always build internal links with `relative_url` (e.g. `{{ '/assets/pdf/Zeli_Ma_CV.pdf' | relative_url }}`) so the `/website` prefix is added.
-- **`_data/cv.yml`** feeds the al-folio CV page. The homepage does not use it.
-- **CV PDF:** the homepage "View CV" button and the footer "CV / PDF" link point to `assets/pdf/Zeli_Ma_CV.pdf`.
+- **CV PDF:** every CV entry point uses `assets/pdf/Zeli_Ma_CV.pdf`: the homepage "View CV" button, the footer "CV / PDF" link, and the "CV" item in the al-folio nav (shown on project pages), which links straight to the PDF via `redirect:` in `_pages/cv.html`.
+- **CV source:** `_cv/Zeli_Ma_CV.tex` (XeLaTeX, TeX Gyre Heros, two pages; Jekyll ignores `_cv/`). Edit it, build with `xelatex -output-directory=<tmp> _cv/Zeli_Ma_CV.tex` (twice), check it is still two pages, and copy the PDF over `assets/pdf/Zeli_Ma_CV.pdf`. Do not hand-edit the PDF.
+- **Old CV URLs:** `/cv/` is a redirect page to the PDF. Old PDF paths (`assets/rendercv/rendercv_output/Zeli_Ma_CV.pdf` and the two resumes once in `assets/`) no longer exist; `_pages/404.md` forwards them to the current PDF. Add any future retired CV path to that list.
+- **`_data/cv.yml`** is no longer displayed anywhere (the `/cv/` page only redirects). The homepage does not use it either.
 - Note: `Research: - company:` etc. is a display quirk — the `company` field is the top-line label for a research/experience entry, not literally an employer, so it's OK for it to hold a project name.
 - Do **not** commit anything under `_site/` (gitignored build output) or `.jekyll-cache/`.
 - Binary CV PDFs live in `assets/` and are committed intentionally.
