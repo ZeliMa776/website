@@ -60,4 +60,4 @@ occasion, and personal style, with virtual try-on image generation.
   tests, frontend E2E tests, and service-level unit tests; participated 
   in code review and CI/CD maintenance.
 
-**Course:** Software Engineering (CS423), Johns Hopkins University
+**Course:** EN.601.623 AI-Enabled Software Engineering, Johns Hopkins University (Spring 2026)

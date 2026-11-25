@@ -37,7 +37,7 @@
 
 % Section heading: bold caps, 0.4pt rule underneath.
 \newcommand{\cvsection}[1]{%
-  \par\vspace{12pt}%
+  \par\vspace{10pt}%
   \hbox{\bfseries\addfontfeatures{LetterSpace=8}\MakeUppercase{#1}\strut}%
   \nointerlineskip\kern 2.67pt\hrule height 0.4pt\kern 6pt\prevdepth=0pt}
 
@@ -116,10 +116,11 @@ Foundation-model agents for embodied decision-making: coordinating multiple robo
 \end{cvitems}
 
 \cvsection{Selected Projects}
-\textbf{Café social robot} \enspace{\small\color{cvgray}Human-Robot Interaction course project}\par
+\cvheading{WearWise: LLM outfit-recommendation agent}{Spring 2026}
+\cvnote{Team project, EN.601.623 AI-Enabled Software Engineering \enspace·\enspace \href{https://wearwise-cs423.web.app/}{wearwise-cs423.web.app}}
 \begin{cvitems}
-  \item Built a conversational service robot with GPT-4o, Whisper, speech synthesis, and ROS 2.
-  \item Refined the robot’s dialogue policy over two co-design rounds with the same two participants. In the second round, the robot made fewer unsolicited drink suggestions and sustained conversations on topics beyond coffee.
+  \item Developed the tool-calling agent of a deployed web app that recommends outfits from a user's own wardrobe and renders them on the user's photo. Before recommending, the agent checks whether location, occasion, and timing are known and asks the user when they are not. Each outfit is returned through a tool call that rejects items not in the user's wardrobe, so hallucinated items never reach the user.
+  \item Built the virtual try-on pipeline with Gemini, generating photorealistic images whose background matches the occasion and weather inferred by the agent. Wrote a golden-case evaluation suite for the five AI components and added structured logging to every model call.
 \end{cvitems}
 
 \cvsection{Teaching Experience}
@@ -146,7 +147,7 @@ University First-Class Scholarship\hfill 2023 and 2024\par
 
 \cvsection{Technical Skills and Languages}
 \vspace{1pt}
-\makebox[127.2bp][l]{\textbf{Programming}}Python, C/C++, Go\par
+\makebox[127.2bp][l]{\textbf{Programming}}Python, C/C++, Go, TypeScript\par
 \makebox[127.2bp][l]{\textbf{Robotics and imaging}}Isaac Sim, ROS 2, MoveIt, OMPL, DeepDRR, 3D Slicer\par
 \makebox[127.2bp][l]{\textbf{Systems}}Linux, PostgreSQL, Redis, OpenTelemetry\par
 \makebox[127.2bp][l]{\textbf{English}}TOEFL iBT 109/120\par
