@@ -116,10 +116,10 @@ Foundation-model agents for embodied decision-making: coordinating multiple robo
 \end{cvitems}
 
 \cvsection{Selected Projects}
-\textbf{WearWise: LLM outfit recommendation} \enspace{\small\color{cvgray}Software Engineering course project \enspace·\enspace \href{https://wearwise-cs423.web.app/}{wearwise-cs423.web.app}}\par
+\textbf{WearWise: LLM outfit-recommendation agent} \enspace{\small\color{cvgray}Software Engineering (CS423) team project \enspace·\enspace \href{https://wearwise-cs423.web.app/}{wearwise-cs423.web.app}}\par
 \begin{cvitems}
-  \item Built the recommendation engine of a cloud wardrobe app as a Gemini tool-calling agent. Each outfit is submitted through a validated tool call that rejects invalid items and duplicate categories with automatic retry, and is streamed to the interface as it is generated.
-  \item Designed a location $\rightarrow$ weather $\rightarrow$ local time $\rightarrow$ occasion inference chain that degrades gracefully when location access fails, and a feedback loop that turns user votes into style summaries for later recommendations. Contributed 40+ pull requests over four iterations, including integration, end-to-end, and unit tests.
+  \item Developed the tool-calling agent of a deployed web app that recommends outfits from a user's own wardrobe and renders them on the user's photo. Before recommending, the agent checks whether location, occasion, and timing are known and asks the user when they are not. Each outfit is returned through a tool call that rejects items not in the user's wardrobe, so hallucinated items never reach the user.
+  \item Built the virtual try-on pipeline with Gemini, generating photorealistic images whose background matches the occasion and weather inferred by the agent. Wrote a golden-case evaluation suite for the five AI components and added structured logging to every model call.
 \end{cvitems}
 
 \cvsection{Teaching Experience}
