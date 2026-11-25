@@ -37,7 +37,7 @@
 
 % Section heading: bold caps, 0.4pt rule underneath.
 \newcommand{\cvsection}[1]{%
-  \par\vspace{12pt}%
+  \par\vspace{10pt}%
   \hbox{\bfseries\addfontfeatures{LetterSpace=8}\MakeUppercase{#1}\strut}%
   \nointerlineskip\kern 2.67pt\hrule height 0.4pt\kern 6pt\prevdepth=0pt}
 
@@ -116,7 +116,8 @@ Foundation-model agents for embodied decision-making: coordinating multiple robo
 \end{cvitems}
 
 \cvsection{Selected Projects}
-\textbf{WearWise: LLM outfit-recommendation agent} \enspace{\small\color{cvgray}Software Engineering (CS423) team project \enspace·\enspace \href{https://wearwise-cs423.web.app/}{wearwise-cs423.web.app}}\par
+\cvheading{WearWise: LLM outfit-recommendation agent}{Spring 2026}
+\cvnote{Team project, EN.601.623 AI-Enabled Software Engineering \enspace·\enspace \href{https://wearwise-cs423.web.app/}{wearwise-cs423.web.app}}
 \begin{cvitems}
   \item Developed the tool-calling agent of a deployed web app that recommends outfits from a user's own wardrobe and renders them on the user's photo. Before recommending, the agent checks whether location, occasion, and timing are known and asks the user when they are not. Each outfit is returned through a tool call that rejects items not in the user's wardrobe, so hallucinated items never reach the user.
   \item Built the virtual try-on pipeline with Gemini, generating photorealistic images whose background matches the occasion and weather inferred by the agent. Wrote a golden-case evaluation suite for the five AI components and added structured logging to every model call.
